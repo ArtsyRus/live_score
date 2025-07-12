@@ -92,6 +92,10 @@ app.post('/set-drivers', (req, res) => {
 });
 
 app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the Live Scoreboard Overlay!');
+});
 server.listen(3000, '0.0.0.0',() => {
   console.log('Server running at http://localhost:3000');
 });
