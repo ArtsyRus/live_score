@@ -1,5 +1,5 @@
 // public/control.js
-const socket = new WebSocket(`ws://${location.host}`);
+const socket = new WebSocket(`wss://${location.host}`);
 let racers = [];
 
 socket.addEventListener('message', event => {
