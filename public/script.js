@@ -9,6 +9,11 @@ socket.addEventListener('message', event => {
 
 function renderRacers() {
   const container = document.getElementById('raceOverlay');
+    console.log('raceOverlay container:', container);
+  if (!container) {
+    console.error('raceOverlay element not found!');
+    return;
+  }
   container.innerHTML = '';
   racers.forEach(racer => {
     const div = document.createElement('div');
